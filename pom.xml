@@ -19,7 +19,7 @@
         <module>extendo-rfid</module>
         <module>extendo-speech</module>
         <module>droidspeak</module>
-        <!--<module>extendo-webdav</module>-->
+        <module>extendo-webdav</module>
     </modules>
 
 </project>

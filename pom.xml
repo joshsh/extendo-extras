@@ -16,10 +16,19 @@
     <modules>
         <module>extendo-opencalais</module>
         <module>extendo-qrcodes</module>
+        <module>extendo-p5</module>
         <module>extendo-rfid</module>
         <module>extendo-speech</module>
         <module>droidspeak</module>
         <module>extendo-webdav</module>
     </modules>
+
+    <repositories>
+        <repository>
+            <id>fortytwo</id>
+            <name>fortytwo.net Maven repository</name>
+            <url>http://fortytwo.net/maven2</url>
+        </repository>
+    </repositories>
 
 </project>

@@ -4,9 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>extendo-webdav</artifactId>
-    <packaging>jar</packaging>
-    <name>Extendo WebDAV content repository</name>
+    <artifactId>extendo-p5</artifactId>
+    <name>Extendo P5 hacks</name>
 
     <parent>
         <groupId>net.fortytwo.extendo</groupId>
@@ -17,35 +16,24 @@
     <dependencies>
         <dependency>
             <groupId>net.fortytwo.extendo</groupId>
-            <artifactId>extendo-core</artifactId>
+            <artifactId>extendo-speech</artifactId>
             <version>${extendo.version}</version>
         </dependency>
-        <!-- The JCR API -->
         <dependency>
-            <groupId>javax.jcr</groupId>
-            <artifactId>jcr</artifactId>
-            <version>2.0</version>
-        </dependency>
-        <!-- Jackrabbit content repository -->
-        <dependency>
-            <groupId>org.apache.jackrabbit</groupId>
-            <artifactId>jackrabbit-core</artifactId>
-            <version>${jackrabbit.version}</version>
+            <groupId>com.illposed.osc</groupId>
+            <artifactId>javaosc-core</artifactId>
+            <version>${javaosc.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.apache.jackrabbit</groupId>
-            <artifactId>jackrabbit-jcr-server</artifactId>
-            <version>${jackrabbit.version}</version>
+            <groupId>net.fortytwo.ripple</groupId>
+            <artifactId>ripple-core</artifactId>
+            <version>${ripple.version}</version>
         </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>${junit.version}</version>
-            <scope>test</scope>
-        </dependency>
+
     </dependencies>
 
     <build>
+        <sourceDirectory>src/main/java</sourceDirectory>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -66,6 +54,19 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>copy-dependencies</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

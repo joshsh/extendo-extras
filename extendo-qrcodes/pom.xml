@@ -10,23 +10,9 @@
 
     <parent>
         <groupId>net.fortytwo.extendo</groupId>
-        <artifactId>extendo-all</artifactId>
+        <artifactId>extendo-extras</artifactId>
         <version>1.1-SNAPSHOT</version>
     </parent>
-
-    <repositories>
-        <repository>
-            <id>fortytwo</id>
-            <name>fortytwo.net Maven repository</name>
-            <url>http://fortytwo.net/maven2</url>
-        </repository>
-        <!-- temporary, for zxing -->
-        <repository>
-            <id>mvn-adamgent</id>
-            <url>http://mvn-adamgent.googlecode.com/svn/maven/release</url>
-            <name>Adam Gent Maven Repository</name>
-        </repository>
-    </repositories>
 
     <build>
         <plugins>
@@ -62,7 +48,7 @@
         <dependency>
             <groupId>com.google.zxing</groupId>
             <artifactId>core</artifactId>
-            <version>1.6</version>
+            <version>3.1.0</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>

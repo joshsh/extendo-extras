@@ -15,7 +15,7 @@ import java.util.logging.Logger;
  * @author Joshua Shinavier (http://fortytwo.net)
  */
 public class RFIDListener implements DiscoveryListener {
-    private static final Logger LOGGER = Logger.getLogger(RFIDListener.class.getName());
+    private static final Logger logger = Logger.getLogger(RFIDListener.class.getName());
 
     private final Set<AlienClass1Reader> readers;
     private final NetworkDiscoveryListenerService service;
@@ -34,7 +34,7 @@ public class RFIDListener implements DiscoveryListener {
     }
 
     public void readerAdded(DiscoveryItem item) {
-        LOGGER.info("reader added: " + item);
+        logger.info("reader added: " + item);
 
         AlienClass1Reader r;
         try {
@@ -48,11 +48,11 @@ public class RFIDListener implements DiscoveryListener {
     }
 
     public void readerRenewed(final DiscoveryItem item) {
-        LOGGER.info("reader renewed: " + item);
+        logger.info("reader renewed: " + item);
     }
 
     public void readerRemoved(final DiscoveryItem item) {
-        LOGGER.info("reader removed: " + item);
+        logger.info("reader removed: " + item);
 
         try {
             readers.remove(item.getReader());
@@ -77,7 +77,7 @@ public class RFIDListener implements DiscoveryListener {
     }
 
     private void logError(final Exception e) {
-        LOGGER.warning("error: " + e);
+        logger.warning("error: " + e);
         e.printStackTrace(System.err);
     }
 }

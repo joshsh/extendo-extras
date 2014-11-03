@@ -16,7 +16,7 @@ import java.util.logging.Logger;
  * @author Joshua Shinavier (http://fortytwo.net)
  */
 public class RFIDPlay {
-    private static final Logger LOGGER = Logger.getLogger(RFIDPlay.class.getName());
+    private static final Logger logger = Logger.getLogger(RFIDPlay.class.getName());
 
     public RFIDPlay(final String graphUri) throws Exception {
 
@@ -29,7 +29,7 @@ public class RFIDPlay {
         RFIDReader reader = new RFIDReader(l.firstReader(), 4, System.out);
 
         //String readerName = reader.doReaderCommand("get ReaderName");
-        //LOGGER.info("reader name: " + readerName);
+        //logger.info("reader name: " + readerName);
 
         Filter f = new Filter();
 
@@ -49,7 +49,7 @@ public class RFIDPlay {
                     System.out.println("         * " + v);
                 } else {
                     if (atoms.size() > 1) {
-                        LOGGER.warning("multiple atoms with value: " + v);
+                        logger.warning("multiple atoms with value: " + v);
                     }
 
                     for (Atom a : atoms) {

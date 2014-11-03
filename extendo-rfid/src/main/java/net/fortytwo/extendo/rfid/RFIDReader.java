@@ -14,7 +14,7 @@ import java.util.logging.Logger;
  * @author Joshua Shinavier (http://fortytwo.net)
  */
 public class RFIDReader {
-    private static final Logger LOGGER = Logger.getLogger(RFIDReader.class.getName());
+    private static final Logger logger = Logger.getLogger(RFIDReader.class.getName());
 
     private final AlienClass1Reader alienReader;
     private final int numberOfAntennas;
@@ -46,7 +46,7 @@ public class RFIDReader {
         this.numberOfAntennas = numberOfAntennas;
 
 
-        LOGGER.info("reader: " + alienReader);
+        logger.info("reader: " + alienReader);
         alienReader.setUsername("alien");
         alienReader.setPassword("password");
 
@@ -70,7 +70,7 @@ public class RFIDReader {
             int a1 = random.nextInt(numberOfAntennas);
             int a2 = random.nextInt(numberOfAntennas);
             alienReader.setAntennaSequence("" + a1 + "," + a2);
-            LOGGER.fine("setting antenna sequence to " + a1 + "," + a2);
+            logger.fine("setting antenna sequence to " + a1 + "," + a2);
             //alienReader.setAntennaSequence("" + a1);
         }
     }
@@ -93,7 +93,7 @@ public class RFIDReader {
         Tag[] tagList = alienReader.getTagList();
         long after = System.currentTimeMillis();
         // this takes 370s +/- 160s for Wowbagger (an ALR-9800) with four antennas and default settings
-        LOGGER.fine("finished reading tags in " + (after - before) + "ms");
+        logger.fine("finished reading tags in " + (after - before) + "ms");
 
         if (null != tagList) { // the API does sometimes return a null tag list
             for (Tag t : tagList) {

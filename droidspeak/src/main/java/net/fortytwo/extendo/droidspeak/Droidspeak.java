@@ -4,7 +4,7 @@ import javax.sound.sampled.AudioFormat;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.SourceDataLine;
-import javax.swing.*;
+import javax.swing.JFrame;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;

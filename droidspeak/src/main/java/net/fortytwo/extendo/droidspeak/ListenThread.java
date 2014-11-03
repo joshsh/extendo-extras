@@ -22,7 +22,7 @@ class ListenThread extends Thread {
         // the data between the AudioInputStream and
         // the SourceDataLine.  The size is rather
         // arbitrary.
-        byte playBuffer[] = new byte[3200];
+        byte[] playBuffer = new byte[3200];
 
         try {
             //Open and start the SourceDataLine

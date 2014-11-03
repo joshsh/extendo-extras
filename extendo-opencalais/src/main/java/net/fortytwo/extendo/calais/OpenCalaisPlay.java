@@ -44,10 +44,15 @@ public class OpenCalaisPlay {
 //        CalaisResponse response = client.analyze(new URL("http://blog.fortytwo.net"));
 //        CalaisResponse response = client.analyze(new URL("http://en.wikipedia.org/wiki/Supply_chain"));
 
-        //CalaisResponse response = client.analyze("Diabetes mellitus, or simply diabetes, is a group of metabolic diseases in which a person has high blood sugar, either because the pancreas does not produce enough insulin, or because cells do not respond to the insulin that is produced");
+        //CalaisResponse response = client.analyze("Diabetes mellitus, or simply diabetes, is a group
+        // of metabolic diseases in which a person has high blood sugar, either because the pancreas does not
+        // produce enough insulin, or because cells do not respond to the insulin that is produced");
 
         long before = System.currentTimeMillis();
-        CalaisResponse response = client.analyze("The common cause of all forms of otitis media is blockage of the Eustachian tube. This is usually due to swelling of the mucous membranes in the nasopharynx, which in turn can be caused by a viral upper respiratory infection or by allergies.");
+        CalaisResponse response = client.analyze(
+                "The common cause of all forms of otitis media is blockage of the Eustachian tube." +
+                        " This is usually due to swelling of the mucous membranes in the nasopharynx," +
+                        " which in turn can be caused by a viral upper respiratory infection or by allergies.");
         long after = System.currentTimeMillis();
 
         System.out.println("recognized entities:");

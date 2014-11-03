@@ -7,8 +7,10 @@ import com.google.zxing.common.BitMatrix;
 import com.google.zxing.qrcode.QRCodeWriter;
 import net.fortytwo.extendo.Extendo;
 
-import javax.swing.*;
-import java.awt.*;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import java.awt.Graphics;
+import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.util.Hashtable;
 
@@ -52,8 +54,7 @@ public class QRCodePlay {
     /**
      * @param key a seven-digit, base-64 encoded MyOtherBrain identifier
      * @return the QR code image
-     * @throws com.google.zxing.WriterException
-     *          if writing fails
+     * @throws com.google.zxing.WriterException if writing fails
      */
     public Image toQRCode(final String key) throws WriterException {
         String code;

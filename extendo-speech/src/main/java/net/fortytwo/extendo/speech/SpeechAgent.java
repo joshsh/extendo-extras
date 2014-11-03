@@ -75,7 +75,7 @@ public class SpeechAgent {
                             }
 
                             // Grace period keeps the recognizer from reacting to the speaker's voice.
-                            // It takes some time to pull the spurious last result out of the recognizer and throw it away.
+                            // It takes some time to pull the last result out of the recognizer and throw it away.
                             try {
                                 Thread.sleep(1000);
                             } catch (InterruptedException e) {
@@ -122,7 +122,9 @@ public class SpeechAgent {
         }
     }
 
-    private static final String[] MONTH_NAMES = {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
+    private static final String[] MONTH_NAMES = {
+            "January", "February", "March", "April", "May", "June", "July",
+            "August", "September", "October", "November", "December"};
 
     private String spokenDate() {
         Calendar c = new GregorianCalendar();

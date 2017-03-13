@@ -4,9 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>droidspeak</artifactId>
+    <artifactId>smsn-opencalais</artifactId>
     <packaging>jar</packaging>
-    <name>Droidspeak</name>
+    <name>SmSn OpenCalais extension</name>
 
     <parent>
         <groupId>net.fortytwo.smsn</groupId>
@@ -15,6 +15,16 @@
     </parent>
 
     <dependencies>
+        <dependency>
+            <groupId>net.fortytwo.smsn</groupId>
+            <artifactId>smsn-core</artifactId>
+            <version>${smsn.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>mx.bigdata.jcalais</groupId>
+            <artifactId>j-calais</artifactId>
+            <version>1.0</version>
+        </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
